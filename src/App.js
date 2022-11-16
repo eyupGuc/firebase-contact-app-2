@@ -4,6 +4,7 @@ import "./App.css";
 import { useState } from "react";
 import AddUser from "./utils/functions";
 import { UpdateUser } from "./utils/functions";
+import { ToastContainer } from 'react-toastify';
 
 const initialValues = {
   username: "",
@@ -40,6 +41,7 @@ const App = () => {
         handleSubmit={handleSubmit} isAdd={isAdd}
       />
       <Contacts editUser={editUser} />
+      <ToastContainer/>
     </div>
   );
 };
