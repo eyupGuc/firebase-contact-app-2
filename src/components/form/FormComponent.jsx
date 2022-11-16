@@ -15,7 +15,10 @@ import {
 } from "@mui/material";
 import React from "react";
 
-const FormComponent = () => {
+const FormComponent = ({info,setInfo}) => {
+
+
+
   return (
     <Container maxWidth="xs">
       <Grid
@@ -40,7 +43,8 @@ const FormComponent = () => {
               <TextField
                 variant="outlined"
                 name="username"
-                value={null}
+                value={info.username}
+                onChange={handleChange}
                 placeholder="Name"
                 InputProps={{
                   startAdornment: (
@@ -53,7 +57,8 @@ const FormComponent = () => {
               <TextField
                 variant="outlined"
                 name="phoneNumber"
-                value={null}
+                value={info.phoneNumber}
+                onChange={handleChange}
                 placeholder="Phone Number"
                 InputProps={{
                   startAdornment: (
@@ -69,8 +74,8 @@ const FormComponent = () => {
                   label="Gender"
                   name="gender"
                   variant="outlined"
-                  value={null}
-                  onChange={null}
+                  value={info.gender}
+                  onChange={handleChange}
                 >
                   <MenuItem value="Female">Female</MenuItem>
                   <MenuItem value="Male">Male</MenuItem>
