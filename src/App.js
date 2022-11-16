@@ -1,9 +1,10 @@
 import FormComponent from "./components/form/FormComponent";
 import Contacts from "./components/contacts/Contacts";
+import "./App.css";
 
 const App=()=>{
 
-  return (<div>
+  return (<div className="App">
 <FormComponent/>
 <Contacts/>
 

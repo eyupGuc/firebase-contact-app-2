@@ -1,10 +1,17 @@
-import { Grid } from "@mui/material";
-import { Box, Container } from "@mui/system";
+import { AccountCircle } from "@mui/icons-material";
+import {
+  Grid,
+  Box,
+  Container,
+  Stack,
+  TextField,
+  InputAdornment,
+} from "@mui/material";
 import React from "react";
 
 const FormComponent = () => {
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="xs">
       <Grid
         textAlign="center"
         verticalAlign="middle"
@@ -26,7 +33,25 @@ const FormComponent = () => {
         </p>
 
         <h2 className="contact-header">Add Contact</h2>
-        <Box style={{ backgroundColor: "White", padding: "20px" }}></Box>
+        <Box style={{ backgroundColor: "White", padding: "20px" }}>
+          <form>
+            <Stack spacing={3} direction="column">
+              <TextField
+                variant="outlined"
+                name="username"
+                value={null}
+                placeholder="Name"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <AccountCircle />
+                    </InputAdornment>
+                  ),
+                }}
+              ></TextField>
+            </Stack>
+          </form>
+        </Box>
       </Grid>
     </Container>
   );
