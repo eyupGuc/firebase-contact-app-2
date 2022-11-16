@@ -22,7 +22,6 @@ const AddUser = (info) => {
     phoneNumber: info.phoneNumber,
     gender: info.gender,
   });
-  Toastify("Added User");
 };
 export default AddUser;
 
@@ -54,7 +53,7 @@ export const useFetch = () => {
 export const DeleteUser = (id) => {
   const db = getDatabase(firebase);
   remove(ref(db, "user/" + id));
-  Toastify("Deleted Successfully")
+  Toastify("Deleted Successfully");
 };
 
 export const UpdateUser = (info) => {
