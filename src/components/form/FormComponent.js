@@ -1,4 +1,5 @@
 import { AccountCircle } from "@mui/icons-material";
+import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 import {
   Grid,
   Box,
@@ -6,6 +7,10 @@ import {
   Stack,
   TextField,
   InputAdornment,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
 } from "@mui/material";
 import React from "react";
 
@@ -20,12 +25,7 @@ const FormComponent = () => {
       >
         <p className="contact-header">
           <div>
-            <a
-              href="#"
-              className="design"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="#" className="design" rel="noopener noreferrer">
               <code>{"<eGuc/>"}</code>
             </a>
           </div>
@@ -48,7 +48,35 @@ const FormComponent = () => {
                     </InputAdornment>
                   ),
                 }}
-              ></TextField>
+              />
+              <TextField
+                variant="outlined"
+                name="phoneNumber"
+                value={null}
+                placeholder="Phone Number"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <PhoneEnabledIcon />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+              <FormControl variant="standart" sx={{ m: 1, minWidth: 120 }}>
+                <InputLabel style={{ paddingLeft: "20px" }}>Gender</InputLabel>
+                <Select
+                  label="Gender"
+                  name="gender"
+                  variant="outlined"
+                  value={null}
+                  onChange={null}
+                >
+                 
+                  <MenuItem value="Female">Female</MenuItem>
+                  <MenuItem value="Male">Male</MenuItem>
+                  <MenuItem value="Other">Other</MenuItem>
+                </Select>
+              </FormControl>
             </Stack>
           </form>
         </Box>
