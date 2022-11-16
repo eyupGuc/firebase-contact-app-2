@@ -11,6 +11,7 @@ import {
   InputLabel,
   Select,
   MenuItem,
+  Button,
 } from "@mui/material";
 import React from "react";
 
@@ -71,12 +72,14 @@ const FormComponent = () => {
                   value={null}
                   onChange={null}
                 >
-                 
                   <MenuItem value="Female">Female</MenuItem>
                   <MenuItem value="Male">Male</MenuItem>
                   <MenuItem value="Other">Other</MenuItem>
                 </Select>
               </FormControl>
+              <Button variant="contained" type="submit" value="Submit">
+                ADD
+              </Button>
             </Stack>
           </form>
         </Box>
