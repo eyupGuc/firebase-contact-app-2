@@ -35,7 +35,7 @@ const FormComponent = ({ info, setInfo,handleSubmit }) => {
       >
         <div className="contact-header">
           <div>
-            <a href="#" className="design" rel="noopener noreferrer">
+            <a href="https://github.com/eyupGuc" target="_blank" className="design" rel="noopener noreferrer">
               <code>{"<eGuc/>"}</code>
             </a>
           </div>
@@ -80,7 +80,7 @@ const FormComponent = ({ info, setInfo,handleSubmit }) => {
                   label="Gender"
                   name="gender"
                   variant="outlined"
-                  value={info.gender}
+                  value={info?.gender}
                   onChange={handleChange}
                 >
                   <MenuItem value="Female">Female</MenuItem>

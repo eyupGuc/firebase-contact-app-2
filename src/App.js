@@ -20,13 +20,19 @@ if(info.id){
   console.log("update user")
 }else{
 AddUser(info)
+setInfo(initialValues)
 
 }
   }
 
+  const editUser=(id,username,phoneNumber,gender)=>{
+
+setInfo({id,username,phoneNumber,gender})
+  }
+
   return (<div className="App">
-<FormComponent info={info} setInfo={setInfo} handleSubmit={handleSubmit}/>
-<Contacts/>
+<FormComponent info={info} setInfo={setInfo} handleSubmit={handleSubmit} />
+<Contacts editUser={editUser}/>
 
   </div>)
 }

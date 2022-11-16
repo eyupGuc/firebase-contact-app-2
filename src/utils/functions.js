@@ -46,3 +46,5 @@ export const DeleteUser=(id)=>{
 const db=getDatabase(firebase)
 remove(ref(db,"user/"+id))
 }
+
+

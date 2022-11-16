@@ -10,12 +10,12 @@ import {
 import React from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
-import { useFetch,DeleteUser } from "../../utils/functions";
+import { useFetch, DeleteUser } from "../../utils/functions";
 
-const Contacts = () => {
+const Contacts = ({ editUser }) => {
   const { isLoading, contactList } = useFetch();
   // console.log(isLoading)
- 
+
   return (
     <div>
       <h2 className="contact-header">Contacts</h2>
@@ -55,10 +55,19 @@ const Contacts = () => {
                   <TableCell align="center">{item.phoneNumber}</TableCell>
                   <TableCell align="center">{item.gender}</TableCell>
                   <TableCell align="center">
-                    <DeleteIcon onClick={()=>DeleteUser(item.id)}/>
+                    <DeleteIcon onClick={() => DeleteUser(item.id)} />
                   </TableCell>
                   <TableCell align="center">
-                    <EditIcon />
+                    <EditIcon
+                      onClick={() =>
+                        editUser(
+                          item.id,
+                          item.username,
+                          item.phoneNumber,
+                          item.gender
+                        )
+                      }
+                    />
                   </TableCell>
                 </TableRow>
               ))
