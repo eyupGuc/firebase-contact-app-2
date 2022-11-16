@@ -15,7 +15,8 @@ import {
 } from "@mui/material";
 import React from "react";
 
-const FormComponent = ({ info, setInfo,handleSubmit }) => {
+const FormComponent = ({ info, setInfo,handleSubmit,isAdd }) => {
+  
   const handleChange = (e) => {
     e.preventDefault();
     // console.log(e.target);
@@ -89,7 +90,7 @@ const FormComponent = ({ info, setInfo,handleSubmit }) => {
                 </Select>
               </FormControl>
               <Button variant="contained" type="submit" value="Submit">
-                ADD
+                {isAdd}
               </Button>
             </Stack>
           </form>
