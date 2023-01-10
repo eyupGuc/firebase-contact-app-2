@@ -22,6 +22,7 @@ const AddUser = (info) => {
     phoneNumber: info.phoneNumber,
     gender: info.gender,
   });
+  Toastify("Added Successfully")
 };
 export default AddUser;
 
@@ -60,6 +61,6 @@ export const UpdateUser = (info) => {
   const db = getDatabase(firebase);
   const updates = {};
   updates["user/" + info.id] = info;
-
+Toastify("Updated Successfully")
   return update(ref(db), updates);
 };
